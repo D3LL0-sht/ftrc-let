@@ -1,0 +1,180 @@
+/* ============================================================
+   FTRC LET Review System — Global Styles
+   Colors: #0257aa (navy), #fff200 (yellow), #ffffff (white)
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ftrc-navy:   #0257aa;
+  --ftrc-yellow: #fff200;
+  --ftrc-white:  #ffffff;
+  --focus-ring:  rgba(2, 87, 170, 0.25);
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  color: #1a1a1a;
+  background: var(--ftrc-navy);
+  line-height: 1.6;
+}
+
+/* ── Auth pages (login, register) ── */
+.auth-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1.5rem;
+}
+
+.auth-card {
+  background: var(--ftrc-white);
+  border-radius: 20px;
+  padding: 2.8rem 2.2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.2s;
+}
+
+.auth-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.auth-icon-wrap {
+  width: 64px;
+  height: 64px;
+  background: var(--ftrc-navy);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem;
+  box-shadow: 0 6px 14px rgba(2, 87, 170, 0.3);
+}
+
+.auth-icon {
+  font-size: 2rem;
+}
+
+.auth-logo h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--ftrc-navy);
+  margin-bottom: 6px;
+}
+
+.auth-logo p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  letter-spacing: 0.2px;
+}
+
+/* ── Form elements ── */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background: #f9fafb;
+}
+
+.form-group input:focus {
+  border-color: var(--ftrc-navy);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+  background: #fff;
+}
+
+/* ── Buttons ── */
+.btn-primary {
+  width: 100%;
+  background: #1e4f8a;               /* slightly softer navy */
+  color: #ffffff;                    /* ✅ white text */
+  border: none;
+  border-radius: 10px;
+  padding: 13px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  letter-spacing: 0.3px;
+  transition: background 0.25s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(2, 87, 170, 0.35);
+}
+
+.btn-primary:hover {
+  background: #01408a;               /* original dark navy on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(2, 87, 170, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 12px rgba(2, 87, 170, 0.3);
+}
+
+/* ── Alerts ── */
+.alert {
+  padding: 11px 15px;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  margin-bottom: 1.2rem;
+}
+
+.alert-error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.alert-success {
+  background: #f0fdf4;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+/* ── Auth footer ── */
+.auth-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 1.5rem;
+}
+
+.auth-footer a {
+  color: var(--ftrc-navy);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.auth-footer a:hover {
+  color: #01408a;
+  text-decoration: underline;
+}
