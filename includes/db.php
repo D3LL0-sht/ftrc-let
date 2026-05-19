@@ -1,13 +1,13 @@
 <?php
 // ============================================================
-// FTRC LET Review System — Database Connection (Neon.tech)
+// FTRC LET Review System — MySQL Database Connection
 // ============================================================
 require_once __DIR__ . '/../config/config.php';
 
 try {
     $dsn = sprintf(
-        "pgsql:host=%s;port=%s;dbname=%s;sslmode=%s",
-        DB_HOST, DB_PORT, DB_NAME, DB_SSL
+        "mysql:host=%s;port=%s;dbname=%s;charset=%s",
+        DB_HOST, DB_PORT, DB_NAME, DB_CHARSET
     );
 
     $pdo = new PDO($dsn, DB_USER, DB_PASS, [

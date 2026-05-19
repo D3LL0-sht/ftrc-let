@@ -1,0 +1,104 @@
+/* ============================================================
+   FTRC — Dashboard & Analytics Styles
+   ============================================================ */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  border: 1px solid #e5e4de;
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.stat-card .stat-number {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #0257aa;
+  margin: 0;
+}
+
+.stat-card .stat-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 4px 0 0;
+}
+
+.topic-bar { margin-bottom: 1rem; }
+
+.topic-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.topic-bar-track {
+  background: #f0f0ec;
+  border-radius: 99px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.topic-bar-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: #0257aa;
+  transition: width 0.4s ease;
+}
+
+.topic-bar-fill.danger  { background: #e24b4a; }
+.topic-bar-fill.warning { background: #ef9f27; }
+.topic-bar-fill.success { background: #1d9e75; }
+
+.pass-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 99px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.pass-badge.pass { background: #EAF3DE; color: #27500A; }
+.pass-badge.fail { background: #FCEBEB; color: #791F1F; }
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0257aa;
+  margin: 2rem 0 1rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #fff200;
+}
+
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+table th {
+  background: #0257aa;
+  color: #fff200;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+
+table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #f0f0ec;
+  color: #333;
+}
+
+table tr:hover td { background: #f9f9f6; }

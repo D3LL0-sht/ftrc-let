@@ -3,7 +3,7 @@ require_once __DIR__ . '/../includes/auth.php';
 require_once __DIR__ . '/../includes/db.php';
 
 if (is_logged_in()) {
-    header('Location: /FTRC/pages/dashboard.php');
+    header('Location: /pages/dashboard.php');
     exit;
 }
 
@@ -24,9 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['role']      = $user['role'];
 
             if ($user['role'] === 'admin') {
-                header('Location: /FTRC/admin/index.php');
+                header('Location: /admin/index.php');
             } else {
-                header('Location: /FTRC/pages/dashboard.php');
+                header('Location: /pages/dashboard.php');
             }
             exit;
         } else {
@@ -40,18 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Login — FTRC LET Review</title>
-  <link rel="stylesheet" href="/FTRC/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style.css"/>
 </head>
 <body class="auth-page">
-
   <div class="auth-card">
     <div class="auth-logo">
-      <div class="auth-icon-wrap">
-        <span class="auth-icon">🎓</span>
-      </div>
+      <div class="auth-icon-wrap">🎓</div>
       <h1>FTRC LET Review</h1>
       <p>English Specialization</p>
     </div>
@@ -66,23 +63,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input type="email" id="email" name="email"
                placeholder="you@email.com"
                value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
-               required />
+               required/>
       </div>
-
       <div class="form-group">
         <label for="password">Password</label>
         <input type="password" id="password" name="password"
-               placeholder="••••••••"
-               required />
+               placeholder="••••••••" required/>
       </div>
-
       <button type="submit" class="btn-primary">Sign in</button>
     </form>
-
     <p class="auth-footer">
-      No account? <a href="/FTRC/pages/register.php">Register here</a>
+      Falculan Twins Review Center &copy; <?= date('Y') ?>
     </p>
   </div>
-
 </body>
 </html>
