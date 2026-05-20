@@ -4,11 +4,11 @@
 // ============================================================
 
 // Database (MySQL - GoogieHost)
-define('DB_HOST', 'localhost');
-define('DB_PORT', '3306');
-define('DB_NAME', 'your_db_name');   // fill after GoogieHost activates
-define('DB_USER', 'your_db_user');   // fill after GoogieHost activates
-define('DB_PASS', 'your_db_pass');   // fill after GoogieHost activates
+define('DB_HOST',    'localhost');
+define('DB_PORT',    '3306');
+define('DB_NAME',    'fbiihujv_ftrc_let');
+define('DB_USER',    'fbiihujv_ftrc_let');
+define('DB_PASS',    'hacke12345');
 define('DB_CHARSET', 'utf8mb4');
 
 // App
