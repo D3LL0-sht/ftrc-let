@@ -8,7 +8,7 @@ define('DB_HOST',    'localhost');
 define('DB_PORT',    '3306');
 define('DB_NAME',    'fbiihujv_ftrc_let');
 define('DB_USER',    'fbiihujv_ftrc_let');
-define('DB_PASS',    'hacke12345');
+define('DB_PASS', 'Ftrc2024!');
 define('DB_CHARSET', 'utf8mb4');
 
 // App
