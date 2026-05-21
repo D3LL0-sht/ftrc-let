@@ -1,7 +1,4 @@
 <?php
-require_once __DIR__ . '/../config/config.php';
-require_once __DIR__ . '/../includes/auth.php';
-require_login();
 $user = current_user();
 ?>
 <!DOCTYPE html>
@@ -17,10 +14,7 @@ $user = current_user();
 
 <nav class="navbar">
   <div class="nav-brand">🎓 FTRC LET Review</div>
-
-  <!-- Hamburger for mobile -->
   <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
-
   <div class="nav-links" id="nav-links">
     <?php if ($user['role'] === 'admin'): ?>
       <a href="/admin/index.php"
@@ -57,7 +51,6 @@ $user = current_user();
         📊 My Progress
       </a>
     <?php endif; ?>
-
     <div class="nav-user">
       <span class="nav-username">👤 <?= htmlspecialchars($user['name']) ?></span>
       <a href="/pages/logout.php" class="nav-logout">Logout</a>
